@@ -12,12 +12,17 @@ all:
 
 generar:
 	make -f Makefile.sphinx html
-	if [ -n "$(git status --porcelain)" ]; then echo "there are changes"; else echo "no changes"; fi
+	date > last_build.txt
 	git add .
 	git commit -m "update"
 	git push
 	git checkout gh-pages
 	mv build/* ./
+	rm -rf doctrees
+	rm -rf html
+	rm -rf stylesheets
+	rm -rf index.html
+	rm -rf params.json
 	rmdir build
 	git add .
 	git commit -m "actualizando."
