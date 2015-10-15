@@ -9,3 +9,6 @@ all:
 	@echo ""
 	@echo "  $(V)generar$(N)  Actualiza la documentación."
 	@echo ""
+
+generar:
+	make -f Makefile.sphinx html
