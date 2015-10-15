@@ -17,12 +17,12 @@ generar:
 	git commit -m "update"
 	git push
 	git checkout gh-pages
-	mv build/* ./
 	rm -rf doctrees
 	rm -rf html
 	rm -rf stylesheets
 	rm -rf index.html
 	rm -rf params.json
+	mv build/* ./
 	rmdir build
 	git add .
 	git commit -m "actualizando."
