@@ -23,6 +23,7 @@ generar:
 	rm -rf _sources _static *.html objects.inv searchindex.js *.json
 	mv build/html/* ./
 	rm -rf build
+	date > last_build.txt
 	git add .
 	git commit -m "actualizando."
 	git push origin gh-pages
