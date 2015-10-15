@@ -20,9 +20,8 @@ generar:
 	rm -rf doctrees
 	rm -rf html
 	rm -rf stylesheets
-	rm -rf index.html
-	rm -rf params.json
-	mv build/* ./
+	rm -rf _sources _static *.html objects.inv searchindex.js *.json
+	mv build/html/* ./
 	rmdir build
 	git add .
 	git commit -m "actualizando."
