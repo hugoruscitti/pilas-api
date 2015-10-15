@@ -12,3 +12,13 @@ all:
 
 generar:
 	make -f Makefile.sphinx html
+	git add .
+	git commit -m "update"
+	git push
+	git checkout gh-pages
+	mv build/* ./
+	rmdir build
+	git add .
+	git commit -m "actualizando."
+	git push origin gh-pages
+	git checkout master
