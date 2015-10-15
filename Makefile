@@ -22,7 +22,7 @@ generar:
 	rm -rf stylesheets
 	rm -rf _sources _static *.html objects.inv searchindex.js *.json
 	mv build/html/* ./
-	rmdir build
+	rm -rf build
 	git add .
 	git commit -m "actualizando."
 	git push origin gh-pages
