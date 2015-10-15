@@ -12,6 +12,7 @@ all:
 
 generar:
 	make -f Makefile.sphinx html
+	if [ -n "$(git status --porcelain)" ]; then echo "there are changes"; else echo "no changes"; fi
 	git add .
 	git commit -m "update"
 	git push
