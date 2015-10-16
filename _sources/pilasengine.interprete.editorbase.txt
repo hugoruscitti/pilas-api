@@ -1,0 +1,54 @@
+pilasengine.interprete.editorbase
+=========================================
+
+Submodules
+----------
+
+pilasengine.interprete.editorbase.autocomplete
+-----------------------------------------------------
+
+.. automodule:: pilasengine.interprete.editorbase.autocomplete
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pilasengine.interprete.editorbase.deslizador
+---------------------------------------------------
+
+.. automodule:: pilasengine.interprete.editorbase.deslizador
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pilasengine.interprete.editorbase.editor_base
+----------------------------------------------------
+
+.. automodule:: pilasengine.interprete.editorbase.editor_base
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pilasengine.interprete.editorbase.editor_con_deslizador
+--------------------------------------------------------------
+
+.. automodule:: pilasengine.interprete.editorbase.editor_con_deslizador
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pilasengine.interprete.editorbase.highlighter
+----------------------------------------------------
+
+.. automodule:: pilasengine.interprete.editorbase.highlighter
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: pilasengine.interprete.editorbase
+    :members:
+    :undoc-members:
+    :show-inheritance:

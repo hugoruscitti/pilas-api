@@ -1,0 +1,22 @@
+pilasengine.configuracion
+=================================
+
+Submódulos
+----------
+
+pilasengine.configuracion.configuracion_base
+---------------------------------------------------
+
+.. automodule:: pilasengine.configuracion.configuracion_base
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Contenido del módulo
+---------------
+
+.. automodule:: pilasengine.configuracion
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pilasengine.configuracion &mdash; documentación de pilas-engine - 1.2.0</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="documentación de pilas-engine - 1.2.0" href="index.html"/>
+        <link rel="next" title="pilasengine.controles" href="pilasengine.controles.html"/>
+        <link rel="prev" title="pilasengine.comportamientos" href="pilasengine.comportamientos.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pilas-engine
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.html">pilasengine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.actores.html">pilasengine.actores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.asistente.html">pilasengine.asistente</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.colisiones.html">pilasengine.colisiones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.comportamientos.html">pilasengine.comportamientos</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">pilasengine.configuracion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodulos">Submódulos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pilasengine.configuracion.configuracion_base">pilasengine.configuracion.configuracion_base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contenido-del-modulo">Contenido del módulo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.controles.html">pilasengine.controles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.datos.html">pilasengine.datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.depurador.html">pilasengine.depurador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.escenas.html">pilasengine.escenas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.eventos.html">pilasengine.eventos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.fisica.html">pilasengine.fisica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.fondos.html">pilasengine.fondos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.habilidades.html">pilasengine.habilidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.imagenes.html">pilasengine.imagenes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.interfaz.html">pilasengine.interfaz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.manual.html">pilasengine.manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.musica.html">pilasengine.musica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.pad.html">pilasengine.pad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.sonidos.html">pilasengine.sonidos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.tareas.html">pilasengine.tareas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.utils.html">pilasengine.utils</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">pilas-engine</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>pilasengine.configuracion</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/pilasengine.configuracion.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pilasengine-configuracion">
+<h1>pilasengine.configuracion<a class="headerlink" href="#pilasengine-configuracion" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="submodulos">
+<h2>Submódulos<a class="headerlink" href="#submodulos" title="Enlazar permanentemente con este título">¶</a></h2>
+</div>
+<div class="section" id="module-pilasengine.configuracion.configuracion_base">
+<span id="pilasengine-configuracion-configuracion-base"></span><h2>pilasengine.configuracion.configuracion_base<a class="headerlink" href="#module-pilasengine.configuracion.configuracion_base" title="Enlazar permanentemente con este título">¶</a></h2>
+<dl class="class">
+<dt id="pilasengine.configuracion.configuracion_base.Ui_Dialog">
+<em class="property">class </em><code class="descclassname">pilasengine.configuracion.configuracion_base.</code><code class="descname">Ui_Dialog</code><a class="headerlink" href="#pilasengine.configuracion.configuracion_base.Ui_Dialog" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Clases base: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="pilasengine.configuracion.configuracion_base.Ui_Dialog.retranslateUi">
+<code class="descname">retranslateUi</code><span class="sig-paren">(</span><em>Dialog</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.configuracion_base.Ui_Dialog.retranslateUi" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.configuracion.configuracion_base.Ui_Dialog.setupUi">
+<code class="descname">setupUi</code><span class="sig-paren">(</span><em>Dialog</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.configuracion_base.Ui_Dialog.setupUi" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="contenido-del-modulo">
+<h2>Contenido del módulo<a class="headerlink" href="#contenido-del-modulo" title="Enlazar permanentemente con este título">¶</a></h2>
+<span class="target" id="module-pilasengine.configuracion"></span><dl class="class">
+<dt id="pilasengine.configuracion.Configuracion">
+<em class="property">class </em><code class="descclassname">pilasengine.configuracion.</code><code class="descname">Configuracion</code><a class="headerlink" href="#pilasengine.configuracion.Configuracion" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Clases base: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="pilasengine.configuracion.Configuracion.aceleracion_habilitada">
+<code class="descname">aceleracion_habilitada</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.Configuracion.aceleracion_habilitada" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.configuracion.Configuracion.audio_habilitado">
+<code class="descname">audio_habilitado</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.Configuracion.audio_habilitado" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.configuracion.Configuracion.autocompletado_habilitado">
+<code class="descname">autocompletado_habilitado</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.Configuracion.autocompletado_habilitado" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.configuracion.Configuracion.cambiar_fuente">
+<code class="descname">cambiar_fuente</code><span class="sig-paren">(</span><em>fuente_nueva</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.Configuracion.cambiar_fuente" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.configuracion.Configuracion.cargar">
+<code class="descname">cargar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.Configuracion.cargar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.configuracion.Configuracion.cargar_configuracion_por_omision">
+<code class="descname">cargar_configuracion_por_omision</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.Configuracion.cargar_configuracion_por_omision" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.configuracion.Configuracion.definir_aceleracion_habilitada">
+<code class="descname">definir_aceleracion_habilitada</code><span class="sig-paren">(</span><em>valor</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.Configuracion.definir_aceleracion_habilitada" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.configuracion.Configuracion.definir_audio_habilitado">
+<code class="descname">definir_audio_habilitado</code><span class="sig-paren">(</span><em>valor</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.Configuracion.definir_audio_habilitado" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.configuracion.Configuracion.definir_autocompletado">
+<code class="descname">definir_autocompletado</code><span class="sig-paren">(</span><em>valor</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.Configuracion.definir_autocompletado" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.configuracion.Configuracion.definir_pad_habilitado">
+<code class="descname">definir_pad_habilitado</code><span class="sig-paren">(</span><em>valor</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.Configuracion.definir_pad_habilitado" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.configuracion.Configuracion.guardar">
+<code class="descname">guardar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.Configuracion.guardar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.configuracion.Configuracion.obtener_datos_por_omision">
+<code class="descname">obtener_datos_por_omision</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.Configuracion.obtener_datos_por_omision" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.configuracion.Configuracion.obtener_fuente">
+<code class="descname">obtener_fuente</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.Configuracion.obtener_fuente" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.configuracion.Configuracion.obtener_ruta">
+<code class="descname">obtener_ruta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.Configuracion.obtener_ruta" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.configuracion.Configuracion.pad_habilitado">
+<code class="descname">pad_habilitado</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.Configuracion.pad_habilitado" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pilasengine.configuracion.DialogoConfiguracion">
+<em class="property">class </em><code class="descclassname">pilasengine.configuracion.</code><code class="descname">DialogoConfiguracion</code><a class="headerlink" href="#pilasengine.configuracion.DialogoConfiguracion" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Clases base: <a class="reference internal" href="#pilasengine.configuracion.configuracion_base.Ui_Dialog" title="pilasengine.configuracion.configuracion_base.Ui_Dialog"><code class="xref py py-class docutils literal"><span class="pre">pilasengine.configuracion.configuracion_base.Ui_Dialog</span></code></a></p>
+<dl class="method">
+<dt id="pilasengine.configuracion.DialogoConfiguracion.cuando_pulsa_el_boton_fuente">
+<code class="descname">cuando_pulsa_el_boton_fuente</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.DialogoConfiguracion.cuando_pulsa_el_boton_fuente" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.configuracion.DialogoConfiguracion.cuando_pulsa_el_boton_guardar">
+<code class="descname">cuando_pulsa_el_boton_guardar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.DialogoConfiguracion.cuando_pulsa_el_boton_guardar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.configuracion.DialogoConfiguracion.definir_fuente">
+<code class="descname">definir_fuente</code><span class="sig-paren">(</span><em>font</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.DialogoConfiguracion.definir_fuente" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.configuracion.DialogoConfiguracion.setupUi">
+<code class="descname">setupUi</code><span class="sig-paren">(</span><em>Dialog</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.DialogoConfiguracion.setupUi" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pilasengine.configuracion.abrir">
+<code class="descclassname">pilasengine.configuracion.</code><code class="descname">abrir</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.configuracion.abrir" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pilasengine.controles.html" class="btn btn-neutral float-right" title="pilasengine.controles" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pilasengine.comportamientos.html" class="btn btn-neutral" title="pilasengine.comportamientos" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.2.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

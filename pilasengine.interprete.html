@@ -1,0 +1,968 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pilasengine.interprete package &mdash; documentación de pilas-engine - 1.2.0</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="documentación de pilas-engine - 1.2.0" href="index.html"/>
+        <link rel="up" title="pilasengine package" href="pilasengine.html"/>
+        <link rel="next" title="pilasengine.interprete.editorbase package" href="pilasengine.interprete.editorbase.html"/>
+        <link rel="prev" title="pilasengine.interfaz package" href="pilasengine.interfaz.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pilas-engine
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="pilasengine.html">pilasengine package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pilasengine.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.actores.html">pilasengine.actores package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.asistente.html">pilasengine.asistente package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.colisiones.html">pilasengine.colisiones package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.comportamientos.html">pilasengine.comportamientos package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.configuracion.html">pilasengine.configuracion package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.controles.html">pilasengine.controles package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.datos.html">pilasengine.datos package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.depurador.html">pilasengine.depurador package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.escenas.html">pilasengine.escenas package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.eventos.html">pilasengine.eventos package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.fisica.html">pilasengine.fisica package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.fondos.html">pilasengine.fondos package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.habilidades.html">pilasengine.habilidades package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.imagenes.html">pilasengine.imagenes package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.interfaz.html">pilasengine.interfaz package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">pilasengine.interprete package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pilasengine.interprete.editor">pilasengine.interprete.editor module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pilasengine.interprete.editor_ui">pilasengine.interprete.editor_ui module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pilasengine.interprete.interprete_base">pilasengine.interprete.interprete_base module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pilasengine.interprete.io_lanas">pilasengine.interprete.io_lanas module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pilasengine.interprete.lanas">pilasengine.interprete.lanas module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pilasengine.interprete.lanas_ui">pilasengine.interprete.lanas_ui module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pilasengine-interprete-test-lanas-module">pilasengine.interprete.test_lanas module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pilasengine.interprete.ventana_interprete">pilasengine.interprete.ventana_interprete module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pilasengine.interprete">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.manual.html">pilasengine.manual package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.musica.html">pilasengine.musica package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.pad.html">pilasengine.pad package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.sonidos.html">pilasengine.sonidos package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.tareas.html">pilasengine.tareas package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pilasengine.utils.html">pilasengine.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pilasengine.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pilasengine.html#module-pilasengine.colores">pilasengine.colores module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pilasengine.html#module-pilasengine.fps">pilasengine.fps module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pilasengine.html#module-pilasengine.plugins">pilasengine.plugins module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pilasengine.html#module-pilasengine.prueba_habilidades">pilasengine.prueba_habilidades module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pilasengine.html#module-pilasengine.simbolos">pilasengine.simbolos module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pilasengine.html#module-pilasengine.watcher">pilasengine.watcher module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pilasengine.html#module-pilasengine.widget">pilasengine.widget module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pilasengine.html#module-pilasengine">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">pilas-engine</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="pilasengine.html">pilasengine package</a> &raquo;</li>
+      
+    <li>pilasengine.interprete package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/pilasengine.interprete.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pilasengine-interprete-package">
+<h1>pilasengine.interprete package<a class="headerlink" href="#pilasengine-interprete-package" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pilasengine.interprete.editorbase.html">pilasengine.interprete.editorbase package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pilasengine.interprete.editorbase.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pilasengine.interprete.editorbase.html#module-pilasengine.interprete.editorbase.autocomplete">pilasengine.interprete.editorbase.autocomplete module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pilasengine.interprete.editorbase.html#module-pilasengine.interprete.editorbase.deslizador">pilasengine.interprete.editorbase.deslizador module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pilasengine.interprete.editorbase.html#module-pilasengine.interprete.editorbase.editor_base">pilasengine.interprete.editorbase.editor_base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pilasengine.interprete.editorbase.html#module-pilasengine.interprete.editorbase.editor_con_deslizador">pilasengine.interprete.editorbase.editor_con_deslizador module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pilasengine.interprete.editorbase.html#module-pilasengine.interprete.editorbase.highlighter">pilasengine.interprete.editorbase.highlighter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pilasengine.interprete.editorbase.html#module-pilasengine.interprete.editorbase">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Enlazar permanentemente con este título">¶</a></h2>
+</div>
+<div class="section" id="module-pilasengine.interprete.editor">
+<span id="pilasengine-interprete-editor-module"></span><h2>pilasengine.interprete.editor module<a class="headerlink" href="#module-pilasengine.interprete.editor" title="Enlazar permanentemente con este título">¶</a></h2>
+<dl class="class">
+<dt id="pilasengine.interprete.editor.Editor">
+<em class="property">class </em><code class="descclassname">pilasengine.interprete.editor.</code><code class="descname">Editor</code><span class="sig-paren">(</span><em>main</em>, <em>interpreterLocals</em>, <em>consola_lanas</em>, <em>ventana_interprete</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Clases base: <a class="reference internal" href="pilasengine.interprete.editorbase.html#pilasengine.interprete.editorbase.editor_base.EditorBase" title="pilasengine.interprete.editorbase.editor_base.EditorBase"><code class="xref py py-class docutils literal"><span class="pre">pilasengine.interprete.editorbase.editor_base.EditorBase</span></code></a></p>
+<p>Representa el editor de texto que aparece en el panel derecho.</p>
+<p>El editor soporta autocompletado de código y resaltado de sintáxis.</p>
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.abrir_archivo_con_dialogo">
+<code class="descname">abrir_archivo_con_dialogo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.abrir_archivo_con_dialogo" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.abrir_archivo_del_proyecto">
+<code class="descname">abrir_archivo_del_proyecto</code><span class="sig-paren">(</span><em>nombre_de_archivo</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.abrir_archivo_del_proyecto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.abrir_dialogo_cargar_archivo">
+<code class="descname">abrir_dialogo_cargar_archivo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.abrir_dialogo_cargar_archivo" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.cargar_contenido_desde_archivo">
+<code class="descname">cargar_contenido_desde_archivo</code><span class="sig-paren">(</span><em>ruta</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.cargar_contenido_desde_archivo" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Carga todo el contenido del archivo indicado por ruta.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.crear_archivo_inicial">
+<code class="descname">crear_archivo_inicial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.crear_archivo_inicial" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.crear_y_seleccionar_archivo">
+<code class="descname">crear_y_seleccionar_archivo</code><span class="sig-paren">(</span><em>nombre</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.crear_y_seleccionar_archivo" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.cuando_cambia_archivo_de_forma_externa">
+<code class="descname">cuando_cambia_archivo_de_forma_externa</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.cuando_cambia_archivo_de_forma_externa" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.cuando_selecciona_actor_por_indice">
+<code class="descname">cuando_selecciona_actor_por_indice</code><span class="sig-paren">(</span><em>indice</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.cuando_selecciona_actor_por_indice" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.ejecutar">
+<code class="descname">ejecutar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.ejecutar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.es_archivo_iniciar_sin_guardar">
+<code class="descname">es_archivo_iniciar_sin_guardar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.es_archivo_iniciar_sin_guardar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.guardar_contenido_con_dialogo">
+<code class="descname">guardar_contenido_con_dialogo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.guardar_contenido_con_dialogo" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.guardar_contenido_directamente">
+<code class="descname">guardar_contenido_directamente</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.guardar_contenido_directamente" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.keyPressEvent">
+<code class="descname">keyPressEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.keyPressEvent" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Atiene el evento de pulsación de tecla.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.marcar_error_en_la_linea">
+<code class="descname">marcar_error_en_la_linea</code><span class="sig-paren">(</span><em>numero</em>, <em>descripcion</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.marcar_error_en_la_linea" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.mensaje_guardar_cambios_abrir">
+<code class="descname">mensaje_guardar_cambios_abrir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.mensaje_guardar_cambios_abrir" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Realizar una consulta usando un cuadro de dialogo simple
+se utiliza cuando hay cambios sin guardar y se desea abrir un archivo.
+Retorna True si el usuario presiona el boton <em>Guardar</em>,
+Retorna False si el usuario presiona <em>No</em>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.mensaje_guardar_cambios_salir">
+<code class="descname">mensaje_guardar_cambios_salir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.mensaje_guardar_cambios_salir" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Realizar una consulta usando un cuadro de dialogo simple
+se utiliza cuando hay cambios sin guardar y se desa salir del Editor.
+Retorna 0 si el usuario presiona el boton <em>Salir sin guardar</em>,
+Retorna 1 si el usuario presiona <em>Guardar</em>
+Retorna 2 si presiona <em>Cancelar</em>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.obtener_archivos_del_proyecto">
+<code class="descname">obtener_archivos_del_proyecto</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.obtener_archivos_del_proyecto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.obtener_contenido">
+<code class="descname">obtener_contenido</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.obtener_contenido" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.prevenir_live_reload">
+<code class="descname">prevenir_live_reload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.prevenir_live_reload" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.recargar_archivo_actual">
+<code class="descname">recargar_archivo_actual</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.recargar_archivo_actual" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.salir">
+<code class="descname">salir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.salir" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Retorna True si puede salir y False si no</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pilasengine.interprete.editor.Editor.signal_ejecutando">
+<code class="descname">signal_ejecutando</code><a class="headerlink" href="#pilasengine.interprete.editor.Editor.signal_ejecutando" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.Editor.tiene_cambios_sin_guardar">
+<code class="descname">tiene_cambios_sin_guardar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.Editor.tiene_cambios_sin_guardar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pilasengine.interprete.editor.WidgetEditor">
+<em class="property">class </em><code class="descclassname">pilasengine.interprete.editor.</code><code class="descname">WidgetEditor</code><span class="sig-paren">(</span><em>main=None</em>, <em>interpreter_locals=None</em>, <em>consola_lanas=None</em>, <em>ventana_interprete=None</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Clases base: <code class="xref py py-class docutils literal"><span class="pre">PyQt4.QtGui.QWidget</span></code>, <a class="reference internal" href="#pilasengine.interprete.editor_ui.Ui_Editor" title="pilasengine.interprete.editor_ui.Ui_Editor"><code class="xref py py-class docutils literal"><span class="pre">pilasengine.interprete.editor_ui.Ui_Editor</span></code></a></p>
+<dl class="class">
+<dt id="pilasengine.interprete.editor.WidgetEditor.NumberBar">
+<em class="property">class </em><code class="descname">NumberBar</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.NumberBar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Clases base: <code class="xref py py-class docutils literal"><span class="pre">PyQt4.QtGui.QWidget</span></code></p>
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.NumberBar.paintEvent">
+<code class="descname">paintEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.NumberBar.paintEvent" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.NumberBar.setTextEdit">
+<code class="descname">setTextEdit</code><span class="sig-paren">(</span><em>edit</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.NumberBar.setTextEdit" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.NumberBar.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.NumberBar.update" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.actualizar_el_listado_de_archivos">
+<code class="descclassname">WidgetEditor.</code><code class="descname">actualizar_el_listado_de_archivos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.actualizar_el_listado_de_archivos" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.closeEvent">
+<code class="descclassname">WidgetEditor.</code><code class="descname">closeEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.closeEvent" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.cuando_cambia_archivo_seleccionado">
+<code class="descclassname">WidgetEditor.</code><code class="descname">cuando_cambia_archivo_seleccionado</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.cuando_cambia_archivo_seleccionado" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.cuando_pulsa_el_boton_ejecutar">
+<code class="descclassname">WidgetEditor.</code><code class="descname">cuando_pulsa_el_boton_ejecutar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.cuando_pulsa_el_boton_ejecutar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.cuando_pulsa_el_boton_pausar">
+<code class="descclassname">WidgetEditor.</code><code class="descname">cuando_pulsa_el_boton_pausar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.cuando_pulsa_el_boton_pausar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.cuando_pulsa_el_boton_siguiente">
+<code class="descclassname">WidgetEditor.</code><code class="descname">cuando_pulsa_el_boton_siguiente</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.cuando_pulsa_el_boton_siguiente" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.cuando_selecciona_item">
+<code class="descclassname">WidgetEditor.</code><code class="descname">cuando_selecciona_item</code><span class="sig-paren">(</span><em>actual</em>, <em>anterior</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.cuando_selecciona_item" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.definir_fuente">
+<code class="descclassname">WidgetEditor.</code><code class="descname">definir_fuente</code><span class="sig-paren">(</span><em>fuente</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.definir_fuente" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.deshabilitar_boton_nuevo">
+<code class="descclassname">WidgetEditor.</code><code class="descname">deshabilitar_boton_nuevo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.deshabilitar_boton_nuevo" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.eventFilter">
+<code class="descclassname">WidgetEditor.</code><code class="descname">eventFilter</code><span class="sig-paren">(</span><em>obj</em>, <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.eventFilter" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.guardar_y_ejecutar">
+<code class="descclassname">WidgetEditor.</code><code class="descname">guardar_y_ejecutar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.guardar_y_ejecutar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.habilitar_boton_nuevo">
+<code class="descclassname">WidgetEditor.</code><code class="descname">habilitar_boton_nuevo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.habilitar_boton_nuevo" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.limpiar_interprete">
+<code class="descclassname">WidgetEditor.</code><code class="descname">limpiar_interprete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.limpiar_interprete" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.pulsa_boton_crear_archivo_nuevo">
+<code class="descclassname">WidgetEditor.</code><code class="descname">pulsa_boton_crear_archivo_nuevo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.pulsa_boton_crear_archivo_nuevo" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.set_icon">
+<code class="descclassname">WidgetEditor.</code><code class="descname">set_icon</code><span class="sig-paren">(</span><em>boton</em>, <em>ruta</em>, <em>text=''</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.set_icon" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor.WidgetEditor.timerEvent">
+<code class="descclassname">WidgetEditor.</code><code class="descname">timerEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor.WidgetEditor.timerEvent" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pilasengine.interprete.editor_ui">
+<span id="pilasengine-interprete-editor-ui-module"></span><h2>pilasengine.interprete.editor_ui module<a class="headerlink" href="#module-pilasengine.interprete.editor_ui" title="Enlazar permanentemente con este título">¶</a></h2>
+<dl class="class">
+<dt id="pilasengine.interprete.editor_ui.Ui_Editor">
+<em class="property">class </em><code class="descclassname">pilasengine.interprete.editor_ui.</code><code class="descname">Ui_Editor</code><a class="headerlink" href="#pilasengine.interprete.editor_ui.Ui_Editor" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Clases base: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="pilasengine.interprete.editor_ui.Ui_Editor.retranslateUi">
+<code class="descname">retranslateUi</code><span class="sig-paren">(</span><em>Editor</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor_ui.Ui_Editor.retranslateUi" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.editor_ui.Ui_Editor.setupUi">
+<code class="descname">setupUi</code><span class="sig-paren">(</span><em>Editor</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.editor_ui.Ui_Editor.setupUi" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pilasengine.interprete.interprete_base">
+<span id="pilasengine-interprete-interprete-base-module"></span><h2>pilasengine.interprete.interprete_base module<a class="headerlink" href="#module-pilasengine.interprete.interprete_base" title="Enlazar permanentemente con este título">¶</a></h2>
+<dl class="class">
+<dt id="pilasengine.interprete.interprete_base.Ui_InterpreteWindow">
+<em class="property">class </em><code class="descclassname">pilasengine.interprete.interprete_base.</code><code class="descname">Ui_InterpreteWindow</code><a class="headerlink" href="#pilasengine.interprete.interprete_base.Ui_InterpreteWindow" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Clases base: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="pilasengine.interprete.interprete_base.Ui_InterpreteWindow.retranslateUi">
+<code class="descname">retranslateUi</code><span class="sig-paren">(</span><em>InterpreteWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.interprete_base.Ui_InterpreteWindow.retranslateUi" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.interprete_base.Ui_InterpreteWindow.setupUi">
+<code class="descname">setupUi</code><span class="sig-paren">(</span><em>InterpreteWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.interprete_base.Ui_InterpreteWindow.setupUi" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pilasengine.interprete.io_lanas">
+<span id="pilasengine-interprete-io-lanas-module"></span><h2>pilasengine.interprete.io_lanas module<a class="headerlink" href="#module-pilasengine.interprete.io_lanas" title="Enlazar permanentemente con este título">¶</a></h2>
+<dl class="class">
+<dt id="pilasengine.interprete.io_lanas.ErrorOutput">
+<em class="property">class </em><code class="descclassname">pilasengine.interprete.io_lanas.</code><code class="descname">ErrorOutput</code><span class="sig-paren">(</span><em>destino</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.io_lanas.ErrorOutput" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Clases base: <a class="reference internal" href="#pilasengine.interprete.io_lanas.Output" title="pilasengine.interprete.io_lanas.Output"><code class="xref py py-class docutils literal"><span class="pre">pilasengine.interprete.io_lanas.Output</span></code></a></p>
+<p>Representa la salida de error en la consola.</p>
+<dl class="method">
+<dt id="pilasengine.interprete.io_lanas.ErrorOutput.write">
+<code class="descname">write</code><span class="sig-paren">(</span><em>linea</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.io_lanas.ErrorOutput.write" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pilasengine.interprete.io_lanas.NormalOutput">
+<em class="property">class </em><code class="descclassname">pilasengine.interprete.io_lanas.</code><code class="descname">NormalOutput</code><span class="sig-paren">(</span><em>destino</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.io_lanas.NormalOutput" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Clases base: <a class="reference internal" href="#pilasengine.interprete.io_lanas.Output" title="pilasengine.interprete.io_lanas.Output"><code class="xref py py-class docutils literal"><span class="pre">pilasengine.interprete.io_lanas.Output</span></code></a></p>
+<p>Representa la salida estándar de la consola.</p>
+<dl class="method">
+<dt id="pilasengine.interprete.io_lanas.NormalOutput.write">
+<code class="descname">write</code><span class="sig-paren">(</span><em>linea</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.io_lanas.NormalOutput.write" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pilasengine.interprete.io_lanas.Output">
+<em class="property">class </em><code class="descclassname">pilasengine.interprete.io_lanas.</code><code class="descname">Output</code><span class="sig-paren">(</span><em>destino</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.io_lanas.Output" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Clases base: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Representación abstracta de un archivo de salida de datos.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pilasengine.interprete.lanas">
+<span id="pilasengine-interprete-lanas-module"></span><h2>pilasengine.interprete.lanas module<a class="headerlink" href="#module-pilasengine.interprete.lanas" title="Enlazar permanentemente con este título">¶</a></h2>
+<dl class="class">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas">
+<em class="property">class </em><code class="descclassname">pilasengine.interprete.lanas.</code><code class="descname">InterpreteLanas</code><span class="sig-paren">(</span><em>parent</em>, <em>codigo_inicial=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Clases base: <a class="reference internal" href="pilasengine.interprete.editorbase.html#pilasengine.interprete.editorbase.editor_base.EditorBase" title="pilasengine.interprete.editorbase.editor_base.EditorBase"><code class="xref py py-class docutils literal"><span class="pre">pilasengine.interprete.editorbase.editor_base.EditorBase</span></code></a></p>
+<p>Representa el widget del interprete.</p>
+<p>Esta instancia tiene como atributo &#8220;self.ventana&#8221; al
+al QWidget representado por la clase Ventana.</p>
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.canInsertFromMimeData">
+<code class="descname">canInsertFromMimeData</code><span class="sig-paren">(</span><em>*k</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.canInsertFromMimeData" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.clearCurrentBlock">
+<code class="descname">clearCurrentBlock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.clearCurrentBlock" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.funcion_valores_autocompletado">
+<code class="descname">funcion_valores_autocompletado</code><span class="sig-paren">(</span><em>texto</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.funcion_valores_autocompletado" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.guardar_contenido_con_dialogo">
+<code class="descname">guardar_contenido_con_dialogo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.guardar_contenido_con_dialogo" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.help">
+<code class="descname">help</code><span class="sig-paren">(</span><em>objeto=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.help" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.imprimir_linea">
+<code class="descname">imprimir_linea</code><span class="sig-paren">(</span><em>linea</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.imprimir_linea" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.init">
+<code class="descname">init</code><span class="sig-paren">(</span><em>interpreter_locals</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.init" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.input">
+<code class="descname">input</code><span class="sig-paren">(</span><em>expresion</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.input" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.insertFromMimeData">
+<code class="descname">insertFromMimeData</code><span class="sig-paren">(</span><em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.insertFromMimeData" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.insertar_codigo_falso">
+<code class="descname">insertar_codigo_falso</code><span class="sig-paren">(</span><em>codigo</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.insertar_codigo_falso" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.insertar_error">
+<code class="descname">insertar_error</code><span class="sig-paren">(</span><em>mensaje</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.insertar_error" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.insertar_error_desde_exception">
+<code class="descname">insertar_error_desde_exception</code><span class="sig-paren">(</span><em>e</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.insertar_error_desde_exception" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.insertar_mensaje">
+<code class="descname">insertar_mensaje</code><span class="sig-paren">(</span><em>mensaje</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.insertar_mensaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.keyPressEvent">
+<code class="descname">keyPressEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.keyPressEvent" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.keyReleaseEvent">
+<code class="descname">keyReleaseEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.keyReleaseEvent" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.limpiar">
+<code class="descname">limpiar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.limpiar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.limpiar_consejo">
+<code class="descname">limpiar_consejo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.limpiar_consejo" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.marker">
+<code class="descname">marker</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.marker" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.marker_si_es_necesario">
+<code class="descname">marker_si_es_necesario</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.marker_si_es_necesario" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.mostrar_consejo">
+<code class="descname">mostrar_consejo</code><span class="sig-paren">(</span><em>linea</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.mostrar_consejo" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.obtener_contenido">
+<code class="descname">obtener_contenido</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.obtener_contenido" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.print_en_consola_de_texto">
+<code class="descname">print_en_consola_de_texto</code><span class="sig-paren">(</span><em>texto</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.print_en_consola_de_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.raw_input">
+<code class="descname">raw_input</code><span class="sig-paren">(</span><em>mensaje</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.raw_input" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.recall_history">
+<code class="descname">recall_history</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.recall_history" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.InterpreteLanas.ver_codigo">
+<code class="descname">ver_codigo</code><span class="sig-paren">(</span><em>texto</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.InterpreteLanas.ver_codigo" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pilasengine.interprete.lanas.PythonInterpreter">
+<em class="property">class </em><code class="descclassname">pilasengine.interprete.lanas.</code><code class="descname">PythonInterpreter</code><span class="sig-paren">(</span><em>localVars</em>, <em>interprete_lanas</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.PythonInterpreter" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Clases base: <code class="xref py py-class docutils literal"><span class="pre">code.InteractiveInterpreter</span></code></p>
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.PythonInterpreter.es_metodo">
+<code class="descname">es_metodo</code><span class="sig-paren">(</span><em>linea</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.PythonInterpreter.es_metodo" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.PythonInterpreter.runcode">
+<code class="descname">runcode</code><span class="sig-paren">(</span><em>cd</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.PythonInterpreter.runcode" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.PythonInterpreter.showsyntaxerror">
+<code class="descname">showsyntaxerror</code><span class="sig-paren">(</span><em>filename=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.PythonInterpreter.showsyntaxerror" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.PythonInterpreter.write">
+<code class="descname">write</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.PythonInterpreter.write" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pilasengine.interprete.lanas.WidgetLanas">
+<em class="property">class </em><code class="descclassname">pilasengine.interprete.lanas.</code><code class="descname">WidgetLanas</code><span class="sig-paren">(</span><em>parent=None</em>, <em>scope=None</em>, <em>codigo_inicial=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.WidgetLanas" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Clases base: <code class="xref py py-class docutils literal"><span class="pre">PyQt4.QtGui.QWidget</span></code>, <a class="reference internal" href="#pilasengine.interprete.lanas_ui.Ui_Lanas" title="pilasengine.interprete.lanas_ui.Ui_Lanas"><code class="xref py py-class docutils literal"><span class="pre">pilasengine.interprete.lanas_ui.Ui_Lanas</span></code></a></p>
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.WidgetLanas.alternar_log">
+<code class="descname">alternar_log</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.WidgetLanas.alternar_log" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.WidgetLanas.center_on_screen">
+<code class="descname">center_on_screen</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.WidgetLanas.center_on_screen" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.WidgetLanas.closeEvent">
+<code class="descname">closeEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.WidgetLanas.closeEvent" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas.WidgetLanas.obtener_scope">
+<code class="descname">obtener_scope</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas.WidgetLanas.obtener_scope" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pilasengine.interprete.lanas_ui">
+<span id="pilasengine-interprete-lanas-ui-module"></span><h2>pilasengine.interprete.lanas_ui module<a class="headerlink" href="#module-pilasengine.interprete.lanas_ui" title="Enlazar permanentemente con este título">¶</a></h2>
+<dl class="class">
+<dt id="pilasengine.interprete.lanas_ui.Ui_Lanas">
+<em class="property">class </em><code class="descclassname">pilasengine.interprete.lanas_ui.</code><code class="descname">Ui_Lanas</code><a class="headerlink" href="#pilasengine.interprete.lanas_ui.Ui_Lanas" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Clases base: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="pilasengine.interprete.lanas_ui.Ui_Lanas.retranslateUi">
+<code class="descname">retranslateUi</code><span class="sig-paren">(</span><em>Lanas</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas_ui.Ui_Lanas.retranslateUi" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.lanas_ui.Ui_Lanas.setupUi">
+<code class="descname">setupUi</code><span class="sig-paren">(</span><em>Lanas</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.lanas_ui.Ui_Lanas.setupUi" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="pilasengine-interprete-test-lanas-module">
+<h2>pilasengine.interprete.test_lanas module<a class="headerlink" href="#pilasengine-interprete-test-lanas-module" title="Enlazar permanentemente con este título">¶</a></h2>
+</div>
+<div class="section" id="module-pilasengine.interprete.ventana_interprete">
+<span id="pilasengine-interprete-ventana-interprete-module"></span><h2>pilasengine.interprete.ventana_interprete module<a class="headerlink" href="#module-pilasengine.interprete.ventana_interprete" title="Enlazar permanentemente con este título">¶</a></h2>
+<dl class="class">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete">
+<em class="property">class </em><code class="descclassname">pilasengine.interprete.ventana_interprete.</code><code class="descname">VentanaInterprete</code><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Clases base: <a class="reference internal" href="#pilasengine.interprete.interprete_base.Ui_InterpreteWindow" title="pilasengine.interprete.interprete_base.Ui_InterpreteWindow"><code class="xref py py-class docutils literal"><span class="pre">pilasengine.interprete.interprete_base.Ui_InterpreteWindow</span></code></a></p>
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.actualizar_widget_pilas">
+<code class="descname">actualizar_widget_pilas</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.actualizar_widget_pilas" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.cargar_ayuda">
+<code class="descname">cargar_ayuda</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.cargar_ayuda" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.colapsar_ayuda">
+<code class="descname">colapsar_ayuda</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.colapsar_ayuda" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.colapsar_editor">
+<code class="descname">colapsar_editor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.colapsar_editor" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.colapsar_interprete">
+<code class="descname">colapsar_interprete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.colapsar_interprete" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.crear_mensaje_cargando">
+<code class="descname">crear_mensaje_cargando</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.crear_mensaje_cargando" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_mueve_deslizador">
+<code class="descname">cuando_mueve_deslizador</code><span class="sig-paren">(</span><em>a1</em>, <em>a2</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_mueve_deslizador" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_mueve_deslizador_del_editor">
+<code class="descname">cuando_mueve_deslizador_del_editor</code><span class="sig-paren">(</span><em>a1</em>, <em>a2</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_mueve_deslizador_del_editor" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_mueve_deslizador_vertical">
+<code class="descname">cuando_mueve_deslizador_vertical</code><span class="sig-paren">(</span><em>a1</em>, <em>a2</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_mueve_deslizador_vertical" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_pulsa_el_boton_configuracion">
+<code class="descname">cuando_pulsa_el_boton_configuracion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_pulsa_el_boton_configuracion" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_pulsa_el_boton_editor">
+<code class="descname">cuando_pulsa_el_boton_editor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_pulsa_el_boton_editor" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_pulsa_el_boton_guardar_interprete">
+<code class="descname">cuando_pulsa_el_boton_guardar_interprete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_pulsa_el_boton_guardar_interprete" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_pulsa_el_boton_interprete">
+<code class="descname">cuando_pulsa_el_boton_interprete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_pulsa_el_boton_interprete" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_pulsa_el_boton_limpiar">
+<code class="descname">cuando_pulsa_el_boton_limpiar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_pulsa_el_boton_limpiar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_pulsa_el_boton_manual">
+<code class="descname">cuando_pulsa_el_boton_manual</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_pulsa_el_boton_manual" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_pulsa_el_boton_pantalla_completa">
+<code class="descname">cuando_pulsa_el_boton_pantalla_completa</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.cuando_pulsa_el_boton_pantalla_completa" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.definir_fuente_desde_configuracion">
+<code class="descname">definir_fuente_desde_configuracion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.definir_fuente_desde_configuracion" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.definir_icono">
+<code class="descname">definir_icono</code><span class="sig-paren">(</span><em>boton</em>, <em>ruta</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.definir_icono" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.iniciar_interfaz">
+<code class="descname">iniciar_interfaz</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.iniciar_interfaz" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.insertar_widget_de_pilas">
+<code class="descname">insertar_widget_de_pilas</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.insertar_widget_de_pilas" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.mostrar_editor">
+<code class="descname">mostrar_editor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.mostrar_editor" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.mostrar_el_interprete">
+<code class="descname">mostrar_el_interprete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.mostrar_el_interprete" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.mostrar_mensaje_cargando">
+<code class="descname">mostrar_mensaje_cargando</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.mostrar_mensaje_cargando" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.ocultar_editor">
+<code class="descname">ocultar_editor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.ocultar_editor" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.ocultar_el_interprete">
+<code class="descname">ocultar_el_interprete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.ocultar_el_interprete" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.on_close_event">
+<code class="descname">on_close_event</code><span class="sig-paren">(</span><em>evento</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.on_close_event" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.pulsa_boton_depuracion">
+<code class="descname">pulsa_boton_depuracion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.pulsa_boton_depuracion" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pilasengine.interprete.ventana_interprete.VentanaInterprete.setupUi">
+<code class="descname">setupUi</code><span class="sig-paren">(</span><em>main</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.ventana_interprete.VentanaInterprete.setupUi" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pilasengine.interprete">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pilasengine.interprete" title="Enlazar permanentemente con este título">¶</a></h2>
+<dl class="function">
+<dt id="pilasengine.interprete.abrir">
+<code class="descclassname">pilasengine.interprete.</code><code class="descname">abrir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.abrir" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pilasengine.interprete.abrir_editor">
+<code class="descclassname">pilasengine.interprete.</code><code class="descname">abrir_editor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.abrir_editor" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pilasengine.interprete.abrir_script_con_livereload">
+<code class="descclassname">pilasengine.interprete.</code><code class="descname">abrir_script_con_livereload</code><span class="sig-paren">(</span><em>archivo</em><span class="sig-paren">)</span><a class="headerlink" href="#pilasengine.interprete.abrir_script_con_livereload" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pilasengine.interprete.editorbase.html" class="btn btn-neutral float-right" title="pilasengine.interprete.editorbase package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pilasengine.interfaz.html" class="btn btn-neutral" title="pilasengine.interfaz package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.2.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
