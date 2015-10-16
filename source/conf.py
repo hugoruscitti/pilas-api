@@ -16,18 +16,17 @@ import sys
 import os
 import shlex
 
-# If extensions (or modules to document with autodoc) are in another directory,
+# If extensions (ors to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('../pilas'))
-import pilasengine
 
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #needs_sphinx = '1.0'
 
-# Add any Sphinx extension module names here, as strings. They can be
+# Add any Sphinx extension names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
@@ -86,18 +85,18 @@ exclude_patterns = []
 # If true, '()' will be appended to :func: etc. cross-reference text.
 #add_function_parentheses = True
 
-# If true, the current module name will be prepended to all description
+# If true, the current name will be prepended to all description
 # unit titles (such as .. function::).
 #add_module_names = True
 
-# If true, sectionauthor and moduleauthor directives will be shown in the
+# If true, sectionauthor andauthor directives will be shown in the
 # output. They are ignored by default.
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
 
-# A list of ignored prefixes for module index sorting.
+# A list of ignored prefixes for index sorting.
 #modindex_common_prefix = []
 
 # If true, keep warnings as "system message" paragraphs in the built documents.
@@ -162,7 +161,7 @@ html_static_path = ['_static']
 # template names.
 #html_additional_pages = {}
 
-# If false, no module index is generated.
+# If false, no index is generated.
 #html_domain_indices = True
 
 # If false, no index is generated.
@@ -246,7 +245,7 @@ latex_documents = [
 # Documents to append as an appendix to all manuals.
 #latex_appendices = []
 
-# If false, no module index is generated.
+# If false, no index is generated.
 #latex_domain_indices = True
 
 
@@ -277,7 +276,7 @@ texinfo_documents = [
 # Documents to append as an appendix to all manuals.
 #texinfo_appendices = []
 
-# If false, no module index is generated.
+# If false, no index is generated.
 #texinfo_domain_indices = True
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.

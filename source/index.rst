@@ -6,9 +6,28 @@ los símbolos y objetos de la biblioteca `pilas-engine`_.
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    pilasengine
+   pilasengine.actores
+   pilasengine.colisiones
+   pilasengine.comportamientos
+   pilasengine.controles
+   pilasengine.depurador
+   pilasengine.escenas
+   pilasengine.eventos
+   pilasengine.fisica
+   pilasengine.fondos
+   pilasengine.habilidades
+   pilasengine.imagenes
+   pilasengine.interfaz
+   pilasengine.interprete
+   pilasengine.manual
+   pilasengine.musica
+   pilasengine.pad
+   pilasengine.sonidos
+   pilasengine.tareas
+   pilasengine.utils
 
 
 Índice
