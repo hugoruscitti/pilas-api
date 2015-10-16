@@ -1,22 +1,22 @@
-.. pilas-engine documentation master file, created by
-   sphinx-quickstart on Thu Oct 15 18:53:29 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+pilas-engine - API
+==================
 
-Welcome to pilas-engine's documentation!
-========================================
+Esta es la documentación para desarrolladores con todos
+los símbolos y objetos de la biblioteca `pilas-engine`_.
 
-Contents:
 
 .. toctree::
    :maxdepth: 2
 
+   pilasengine
 
 
-Indices and tables
-==================
+Índice
+======
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
 
+
+.. _pilas-engine: http://www.pilas-engine.com.ar

@@ -7,11 +7,14 @@ all:
 	@echo ""
 	@echo "Comandos disponibles:"
 	@echo ""
-	@echo "  $(V)generar$(N)  Actualiza la documentación."
+	@echo "  $(V)compilar$(N)   Genera la documentación local."
+	@echo "  $(V)actualizar$(N) Actualiza la documentación."
 	@echo ""
 
-generar:
+compilar:
 	make -f Makefile.sphinx html
+
+actualizar: compilar
 	date > last_build.txt
 	git add .
 	git commit -m "update"
