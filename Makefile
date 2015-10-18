@@ -8,13 +8,13 @@ all:
 	@echo "Comandos disponibles:"
 	@echo ""
 	@echo "  $(V)compilar$(N)   Genera la documentación local."
-	@echo "  $(V)actualizar$(N) Actualiza la documentación."
+	@echo "  $(V)deploy$(N)     Actualiza la documentación."
 	@echo ""
 
 compilar:
 	make -f Makefile.sphinx html
 
-actualizar: compilar
+deploy: compilar
 	date > last_build.txt
 	git add .
 	git commit -m "update"
@@ -31,3 +31,6 @@ actualizar: compilar
 	git commit -m "actualizando."
 	git push origin gh-pages
 	git checkout master
+	@echo ""
+	@echo " Listo, el manual se subió a http://api.pilas-engine.com.ar"
+	@echo ""
