@@ -24,6 +24,7 @@ deploy: compilar
 	rm -rf html
 	rm -rf stylesheets
 	rm -rf _sources _static *.html objects.inv searchindex.js *.json
+	rm -rf _images
 	mv build/html/* ./
 	rm -rf build
 	date > last_build.txt
